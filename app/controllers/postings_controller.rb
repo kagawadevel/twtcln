@@ -28,6 +28,11 @@ class PostingsController < ApplicationController
   def destroy
   end
 
+  def confirm
+    @posting = Posting.new(posting_params)
+    render :new if @posting.invalid?
+  end
+
   private
   def set_posting
     @twitter = Twitter.find(params[:id])
