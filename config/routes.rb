@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
-  root to  'postings/index'
+  root to: 'postings#index'
 
-  resources postings do
+  resources :postings do
+    collection do
+      post :confirm
+    end
   end
 
 end

@@ -1,0 +1,23 @@
+<%= form_with(model: @posting, local: true ,url: choose_new_or_edit) do |form| %>
+  <% if @posting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @posting.errors.count %>件のエラーがあります。</h2>
+      <ul>
+
+        <% @posting.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.label :content %>
+  <%= form.text_field :content %>
+
+  <%= form.submit %>
+  <br>
+<% end %>
+
+<%= form_with(model: @posting, url: postings_path, local: true, method: 'get') do |form| %>
+  <%= form.submit "もどる" %>
+<% end %>
