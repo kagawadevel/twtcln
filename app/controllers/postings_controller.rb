@@ -29,6 +29,11 @@ class PostingsController < ApplicationController
   end
 
   def update
+    if @posting.update(posting_params)
+      redirect_to postings_path, notice: "投稿を編集しました"
+    else
+      render 'edit'
+    end
   end
 
   def destroy
