@@ -41,7 +41,7 @@ class PostingsController < ApplicationController
 
   private
   def set_posting
-    @twitter = Twitter.find(params[:id])
+    @posting = Posting.find(params[:id])
   end
 
   def posting_params
