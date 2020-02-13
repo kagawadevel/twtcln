@@ -17,6 +17,12 @@ class PostingsController < ApplicationController
   end
 
   def create
+    @posting = Posting.new(posting_params)
+    if @posting.save
+      redirect_to postings_path, notice:"投稿が成功しました"
+    else
+      render 'new'
+    end
   end
 
   def edit

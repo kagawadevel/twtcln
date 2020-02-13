@@ -1,2 +1,15 @@
-<h1>Postings#index</h1>
-<p>Find me in app/views/postings/index.html.erb</p>
+<h1>ツイート一覧</a></h1>
+<p><%= notice %></p>
+
+<% @postings.each do |posting| %>
+
+  <table>
+    <tr>
+      <th><%= posting.content %></th>
+      <td><%= link_to '内容を確認する', posting_path(posting.id) %></td>
+      <td><%= link_to "内容を編集する", edit_posting_path(posting.id) %></td>
+      <td><%= link_to '内容を削除する', posting_path(posting.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+    </tr>
+  </table>
+
+<% end %>
