@@ -37,6 +37,8 @@ class PostingsController < ApplicationController
   end
 
   def destroy
+    @posting.destroy
+    redirect_to postings_path, notice:"投稿を削除しました！"
   end
 
   def confirm
