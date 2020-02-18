@@ -13,9 +13,9 @@
 
   <header>
     <nav>
-      <ul class="navbar-nav">
-        <li class="nav-item"><%= link_to "投稿一覧ページ", postings_path %></li>
-        <li class="nav-item"><%= link_to "新規投稿", new_posting_path %></li>
+      <ul>
+        <li><%= link_to "投稿一覧ページ", postings_path %></li>
+        <li><%= link_to "新規投稿", new_posting_path %></li>
       </ul>
     </nav>
   </header>
@@ -23,7 +23,8 @@
 
     <%= yield %>
 
-
+  <footer>
+  </footer>
 
   </body>
 </html>
