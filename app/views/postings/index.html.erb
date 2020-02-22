@@ -3,7 +3,7 @@
 
 <% @postings.each do |posting| %>
 
-  <table>
+  <table class="table table-hover">
     <tr>
       <th><%= posting.content %></th>
       <td><%= link_to '内容を確認する', posting_path(posting.id) %></td>

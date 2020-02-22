@@ -10,22 +10,24 @@
   </head>
 
   <body>
+    <div class="container">
 
-  <header>
-    <nav>
-      <ul>
-        <li><%= link_to "投稿一覧ページ", postings_path %></li>
-        <li><%= link_to "新規投稿", new_posting_path %></li>
-      </ul>
-    </nav>
-  </header>
+      <header>
+        <nav class="navbar">
+          <ul>
+            <li><%= link_to "投稿一覧ページ", postings_path %></li>
+            <li><%= link_to "新規投稿", new_posting_path %></li>
+          </ul>
+        </nav>
+      </header>
 
 
-    <%= yield %>
+        <%= yield %>
 
-  <footer>
-    <p>rails課題</p>
-  </footer>
+      <footer>
+        <p>rails課題</p>
+      </footer>
 
+    </div>
   </body>
 </html>
